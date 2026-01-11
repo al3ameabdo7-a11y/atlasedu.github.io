@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'wouter';
 import { motion } from 'framer-motion';
-import { BookOpen, Mail, Lock, ArrowRight, AlertCircle } from 'lucide-react';
+import { GraduationCap, Mail, Lock, ArrowRight, AlertCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -43,10 +43,10 @@ export default function Login() {
           className="max-w-md text-white"
         >
           <div className="w-20 h-20 rounded-2xl bg-white/20 backdrop-blur flex items-center justify-center mb-8">
-            <BookOpen className="w-10 h-10" />
+            <GraduationCap className="w-10 h-10" />
           </div>
           <h1 className="font-display text-4xl font-bold mb-4">
-            Welcome Back, Language Learner!
+            Welcome Back to ATLAS EDU!
           </h1>
           <p className="text-xl text-white/80 mb-8">
             Continue your journey to fluency. Your progress is waiting for you!
@@ -82,9 +82,9 @@ export default function Login() {
         >
           <Link href="/" className="flex items-center gap-2 mb-8 lg:hidden">
             <div className="w-10 h-10 rounded-xl gradient-primary flex items-center justify-center">
-              <BookOpen className="w-6 h-6 text-white" />
+              <GraduationCap className="w-6 h-6 text-white" />
             </div>
-            <span className="font-display text-2xl font-bold text-gradient">LinguaLearn</span>
+            <span className="font-display text-2xl font-bold text-gradient">ATLAS EDU</span>
           </Link>
 
           <h2 className="font-display text-3xl font-bold mb-2">Log In</h2>

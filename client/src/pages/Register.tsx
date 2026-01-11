@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'wouter';
 import { motion } from 'framer-motion';
-import { BookOpen, Mail, Lock, User, ArrowRight, AlertCircle, CheckCircle } from 'lucide-react';
+import { GraduationCap, Mail, Lock, User, ArrowRight, AlertCircle, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -60,26 +60,32 @@ export default function Register() {
           className="max-w-md text-white"
         >
           <div className="w-20 h-20 rounded-2xl bg-white/20 backdrop-blur flex items-center justify-center mb-8">
-            <BookOpen className="w-10 h-10" />
+            <GraduationCap className="w-10 h-10" />
           </div>
           <h1 className="font-display text-4xl font-bold mb-4">
-            Start Your Language Journey Today!
+            Join ATLAS EDU Today!
           </h1>
           <p className="text-xl text-white/80 mb-8">
-            Join thousands of learners mastering new languages through fun, interactive lessons.
+            Start your language learning journey with comprehensive lessons and fun games.
           </p>
           <div className="space-y-4">
             <div className="flex items-center gap-3 text-white/80">
               <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
                 🎮
               </div>
-              <span>Gamified learning experience</span>
+              <span>10+ educational games</span>
             </div>
             <div className="flex items-center gap-3 text-white/80">
               <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
                 🌍
               </div>
               <span>8 languages to choose from</span>
+            </div>
+            <div className="flex items-center gap-3 text-white/80">
+              <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
+                📚
+              </div>
+              <span>Hundreds of lessons</span>
             </div>
             <div className="flex items-center gap-3 text-white/80">
               <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
@@ -99,9 +105,9 @@ export default function Register() {
         >
           <Link href="/" className="flex items-center gap-2 mb-8 lg:hidden">
             <div className="w-10 h-10 rounded-xl gradient-primary flex items-center justify-center">
-              <BookOpen className="w-6 h-6 text-white" />
+              <GraduationCap className="w-6 h-6 text-white" />
             </div>
-            <span className="font-display text-2xl font-bold text-gradient">LinguaLearn</span>
+            <span className="font-display text-2xl font-bold text-gradient">ATLAS EDU</span>
           </Link>
 
           <h2 className="font-display text-3xl font-bold mb-2">Create Account</h2>

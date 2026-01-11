@@ -9,7 +9,11 @@ import {
   Globe, 
   Sparkles,
   CheckCircle,
-  ArrowRight
+  ArrowRight,
+  GraduationCap,
+  Brain,
+  Headphones,
+  MessageCircle
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Navbar from '@/components/Navbar';
@@ -19,28 +23,35 @@ import { languages } from '@/lib/languages';
 const features = [
   {
     icon: BookOpen,
-    title: 'Interactive Lessons',
-    description: 'Learn vocabulary, grammar, and conversation skills with engaging, bite-sized lessons.',
+    title: 'Comprehensive Lessons',
+    description: 'Master vocabulary, grammar, conversations, and pronunciation with structured lessons.',
     color: 'from-green-500 to-emerald-600',
   },
   {
     icon: Gamepad2,
-    title: 'Fun Games',
-    description: 'Reinforce learning with memory games, word matching, speed quizzes, and more!',
+    title: '10+ Fun Games',
+    description: 'Word puzzles, memory cards, speed quizzes, listening challenges, and much more!',
     color: 'from-blue-500 to-cyan-600',
   },
   {
     icon: Trophy,
-    title: 'Track Progress',
-    description: 'Earn XP, maintain streaks, and watch your language skills grow over time.',
+    title: 'Earn XP & Rewards',
+    description: 'Track your progress, earn XP points, and maintain daily learning streaks.',
     color: 'from-yellow-500 to-orange-600',
   },
   {
     icon: Users,
-    title: '100% Free',
-    description: 'No subscriptions, no paywalls. Quality language education for everyone.',
+    title: '100% Free Forever',
+    description: 'No subscriptions, no paywalls, no ads. Quality education for everyone.',
     color: 'from-purple-500 to-pink-600',
   },
+];
+
+const lessonTypes = [
+  { icon: BookOpen, title: 'Vocabulary', desc: '500+ words per language' },
+  { icon: Brain, title: 'Grammar', desc: 'Essential rules & patterns' },
+  { icon: MessageCircle, title: 'Conversations', desc: 'Real-world dialogues' },
+  { icon: Headphones, title: 'Pronunciation', desc: 'Audio & speech practice' },
 ];
 
 const benefits = [
@@ -73,12 +84,12 @@ export default function Landing() {
               
               <h1 className="font-display text-5xl lg:text-7xl font-bold leading-tight mb-6">
                 Learn Languages
-                <span className="block text-gradient">The Fun Way</span>
+                <span className="block text-gradient">The Smart Way</span>
               </h1>
               
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                Master new languages with gamified lessons, interactive exercises, and 
-                educational games. No subscription needed—completely free and works offline!
+                Master new languages with <strong>ATLAS EDU</strong>—gamified lessons, interactive exercises, 
+                and educational games. No subscription needed—completely free and works offline!
               </p>
 
               <div className="flex flex-wrap gap-4 mb-8">
@@ -105,7 +116,7 @@ export default function Landing() {
               </div>
 
               <div className="flex flex-wrap gap-3">
-                {benefits.map((benefit, i) => (
+                {benefits.map((benefit) => (
                   <div 
                     key={benefit}
                     className="flex items-center gap-2 text-sm text-muted-foreground"
@@ -155,7 +166,7 @@ export default function Landing() {
             className="text-center mb-16"
           >
             <h2 className="font-display text-4xl lg:text-5xl font-bold mb-4">
-              Why Choose LinguaLearn?
+              Why Choose ATLAS EDU?
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Everything you need to master a new language, without spending a dime.
@@ -184,6 +195,43 @@ export default function Landing() {
       </section>
 
       <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="font-display text-4xl lg:text-5xl font-bold mb-4">
+              Complete Learning Experience
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              From beginner to intermediate, we cover all aspects of language learning.
+            </p>
+          </motion.div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            {lessonTypes.map((type, i) => (
+              <motion.div
+                key={type.title}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="glass-card rounded-2xl p-6 text-center"
+              >
+                <div className="w-16 h-16 rounded-full gradient-primary mx-auto mb-4 flex items-center justify-center">
+                  <type.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="font-display text-lg font-bold mb-1">{type.title}</h3>
+                <p className="text-sm text-muted-foreground">{type.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -260,9 +308,9 @@ export default function Landing() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-lg gradient-primary flex items-center justify-center">
-                <BookOpen className="w-4 h-4 text-white" />
+                <GraduationCap className="w-4 h-4 text-white" />
               </div>
-              <span className="font-display font-bold text-gradient">LinguaLearn</span>
+              <span className="font-display font-bold text-gradient">ATLAS EDU</span>
             </div>
             <p className="text-sm text-muted-foreground">
               Free language learning for everyone. No backend required.

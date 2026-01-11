@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'wouter';
 import { useState } from 'react';
-import { Menu, X, Flame, Zap, User, LogOut, BookOpen, Gamepad2, Home } from 'lucide-react';
+import { Menu, X, Flame, Zap, User, LogOut, BookOpen, Gamepad2, Home, GraduationCap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { isLoggedIn, logout, getUser, getProgress } from '@/lib/storage';
 
@@ -22,10 +22,10 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           <Link href={loggedIn ? '/dashboard' : '/'} className="flex items-center gap-2">
             <div className="w-10 h-10 rounded-xl gradient-primary flex items-center justify-center shadow-lg">
-              <BookOpen className="w-6 h-6 text-white" />
+              <GraduationCap className="w-6 h-6 text-white" />
             </div>
             <span className="font-display text-2xl font-bold text-gradient" data-testid="logo-text">
-              LinguaLearn
+              ATLAS EDU
             </span>
           </Link>
 
