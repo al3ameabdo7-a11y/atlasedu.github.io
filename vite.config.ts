@@ -7,7 +7,7 @@ import { metaImagesPlugin } from "./vite-plugin-meta-images";
 
 export default defineConfig({
   // ✅ مهم جدًا لـ GitHub Pages
-  base: "/REPO_NAME/",
+  base: "/Language-Realm/",
 
   plugins: [
     react(),
