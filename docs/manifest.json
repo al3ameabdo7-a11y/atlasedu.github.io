@@ -2,22 +2,24 @@
   "name": "ATLAS EDU - Free Language Learning",
   "short_name": "ATLAS EDU",
   "description": "Master new languages for free with gamified lessons, interactive exercises, and fun educational games.",
-  "start_url": "./#/",
-  "scope": "./",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#0f172a",
   "theme_color": "#22c55e",
   "orientation": "portrait-primary",
+  "scope": "/",
   "icons": [
     {
-      "src": "icons/icon-192.png",
+      "src": "/icons/icon-192x192.svg",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/svg+xml",
+      "purpose": "any"
     },
     {
-      "src": "icons/icon-512.png",
+      "src": "/icons/icon-512x512.svg",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/svg+xml",
+      "purpose": "any"
     }
   ],
   "categories": ["education", "language"],
